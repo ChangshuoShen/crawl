@@ -1,0 +1,361 @@
+[
+  {
+    "title": "A General Framework for Inference-time Scaling and Steering of Diffusion Models",
+    "url": "https://icml.cc/virtual/2025/poster/45673",
+    "abstract": "Diffusion models are a flexible class of generative models. However, generating samples with user-specified properties remains a challenge. One solution is to fine-tune models to maximize reward functions which capture desired properties. However, fine-tuning can be expensive. In this work, we propose Feynman-Kac (FK) steering, a framework for inference-time steering diffusion models with reward functions. FK steering works by generating multiple trajectories, called particles, and resampling particles at intermediate steps based on scores computed using functions called potentials. Potentials are defined using rewards for intermediate states and are chosen such that a high score indicates the particle will yield a high-reward sample. We explore various choices of potentials, rewards, and samplers. Steering text-to-image models with a human preference reward, we find that FK steering outperforms fine-tuned models with just 2 particles. Moreover, FK steering a 0.8B parameter model outperforms a 2.6B model, achieving state-of-the-art performance on prompt fidelity. We also steer text diffusion models with rewards for text quality and rare attributes such as toxicity, and find that FK steering generates lower perplexity text and enables gradient-free control. Overall, inference-time scaling and steering of diffusion models – even training-free – provides significant quality and controllability benefits.",
+    "is_llm_safety": true
+  },
+  {
+    "title": "Exploring Representations and Interventions in Time Series Foundation Models",
+    "url": "https://icml.cc/virtual/2025/poster/44453",
+    "abstract": "Time series foundation models (TSFMs) promise to be powerful tools for a wide range of applications. However, their internal representations and learned concepts are still not well understood. In this study, we investigate the structure and redundancy of representations across various TSFMs, examining the self-similarity of model layers within and across different model sizes. This analysis reveals block-like redundancy in the representations, which can be utilized for informed pruning to improve inference speed and efficiency. Additionally, we explore the concepts learned by these models—such as periodicity and trends—and how these can be manipulated through latent space steering to influence model behavior. Our experiments show that steering interventions can introduce new features, e.g., adding periodicity or trends to signals that initially lacked them. These findings underscore the value of representational analysis for optimizing models and demonstrate how conceptual steering offers new possibilities for more controlled and efficient time series analysis with TSFMs.",
+    "is_llm_safety": false,
+    "arxiv_url": "http://arxiv.org/abs/2409.12915v3",
+    "arxiv_id": "2409.12915v3",
+    "arxiv_title": "Exploring Representations and Interventions in Time Series Foundation Models",
+    "arxiv_authors": [
+      "Michał Wiliński",
+      "Mononito Goswami",
+      "Nina Żukowska",
+      "Willa Potosnak",
+      "Artur Dubrawski"
+    ],
+    "arxiv_published": "2024-09-19T17:11:27+00:00",
+    "similarity_score": 1.0,
+    "arxiv_all_matches": [
+      {
+        "arxiv_id": "2409.12915v3",
+        "arxiv_url": "http://arxiv.org/abs/2409.12915v3",
+        "arxiv_title": "Exploring Representations and Interventions in Time Series Foundation Models",
+        "authors": [
+          "Michał Wiliński",
+          "Mononito Goswami",
+          "Nina Żukowska",
+          "Willa Potosnak",
+          "Artur Dubrawski"
+        ],
+        "published": "2024-09-19T17:11:27+00:00",
+        "similarity_score": 1.0
+      }
+    ]
+  },
+  {
+    "title": "The Hidden Life of Tokens: Reducing Hallucination of Large Vision-Language Models Via Visual Information Steering",
+    "url": "https://icml.cc/virtual/2025/poster/46338",
+    "abstract": "Large Vision-Language Models (LVLMs) can reason effectively over both textual and visual inputs, but they tend to hallucinate syntactically coherent yet visually ungrounded contents. In this paper, we investigate the internal dynamics of hallucination by examining the tokens logits rankings throughout the generation process, revealing three key patterns in how LVLMs process information: (1) gradual visual information loss -- visually grounded tokens gradually become less favored throughout generation, and (2) early excitation -- semantically meaningful tokens achieve peak activation in the layers earlier than the final layer.(3) hidden genuine information -- visually grounded tokens though not being eventually decided still retain relatively high rankings at inference.Based on these insights, we propose VISTA (Visual Information Steering with Token-logit Augmentation), a training-free inference-time intervention framework that reduces hallucination while promoting genuine information. VISTA works by combining two complementary approaches: reinforcing visual information in activation space and leveraging early layer activations to promote semantically meaningful decoding. Compared to existing methods, VISTA requires no external supervision and is applicable to various decoding strategies. Extensive experiments show that VISTA on average reduces hallucination by abount 40% on evaluated open-ended generation task, and it consistently outperforms existing methods on four benchmarks across four architectures under three decoding strategies.",
+    "is_llm_safety": true
+  },
+  {
+    "title": "How to Steer LLM Latents for Hallucination Detection?",
+    "url": "https://icml.cc/virtual/2025/poster/45122",
+    "abstract": "Hallucinations in LLMs pose a significant concern to their safe deployment in real-world applications. Recent approaches have leveraged the latent space of LLMs for hallucination detection, but their embeddings, optimized for linguistic coherence rather than factual accuracy, often fail to clearly separate truthful and hallucinated content.To this end, we propose the Truthfulness Separator Vector (TSV), a lightweight and flexible steering vector that reshapes the LLM’s representation space during inference to enhance the separation between truthful and hallucinated outputs, without altering model parameters.Our two-stage framework first trains TSV on a small set of labeled exemplars to form compact and well-separated clusters.It then augments the exemplar set with unlabeled LLM generations, employing an optimal transport-based algorithm for pseudo-labeling combined with a confidence-based filtering process.Extensive experiments demonstrate that TSV achieves state-of-the-art performance with minimal labeled data, exhibiting strong generalization across datasets and providing a practical solution for real-world LLM applications.",
+    "is_llm_safety": true
+  },
+  {
+    "title": "The Logical Implication Steering Method for Conditional Interventions on Transformer Generation",
+    "url": "https://icml.cc/virtual/2025/poster/45970",
+    "abstract": "The field of mechanistic interpretability in pre-trained transformer models has demonstrated substantial evidence supporting the ''linear representation hypothesis'', which is the idea that high level concepts are encoded as vectors in the space of activations of a model. Studies also show that model generation behavior can be steered toward a given concept by adding the concept's vector to the corresponding activations. We show how to leverage these properties to build a form of logical implication into models, enabling transparent and interpretable adjustments that induce a chosen generation behavior in response to the presence of any given concept. Our method, Logical Implication Model Steering (LIMS), unlocks new hand engineered reasoning capabilities by integrating neuro-symbolic logic into pre-trained transformer models.",
+    "is_llm_safety": false,
+    "arxiv_url": "http://arxiv.org/abs/2502.03618v1",
+    "arxiv_id": "2502.03618v1",
+    "arxiv_title": "The Logical Implication Steering Method for Conditional Interventions on Transformer Generation",
+    "arxiv_authors": [
+      "Damjan Kalajdzievski"
+    ],
+    "arxiv_published": "2025-02-05T21:09:02+00:00",
+    "similarity_score": 1.0,
+    "arxiv_all_matches": [
+      {
+        "arxiv_id": "2502.03618v1",
+        "arxiv_url": "http://arxiv.org/abs/2502.03618v1",
+        "arxiv_title": "The Logical Implication Steering Method for Conditional Interventions on Transformer Generation",
+        "authors": [
+          "Damjan Kalajdzievski"
+        ],
+        "published": "2025-02-05T21:09:02+00:00",
+        "similarity_score": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Beyond Pointwise Intervention: Learning Distribution-wise Control in Representation Space for Langauge Models",
+    "url": "https://icml.cc/virtual/2025/poster/46193",
+    "abstract": "Interventions in language models (LMs) are frequently employed in interpretability research to modify model behavior during the forward pass. Learnable interventions, also known as representation fine-tuning, aim to apply pointwise control within the concept subspace and have proven effective in altering high-level behaviors. In this work, we extend this approach to the distribution level, enabling the model to learn not only pointwise transformations but also the surrounding regions of the concept subspace. We demonstrate that these methods perform optimally in early layers, with larger standard deviations correlating strongly with improved performance. Across eight commonsense reasoning and seven arithmetic reasoning benchmarks, our distribution-level interventions consistently outperform pointwise interventions in controllability and robustness. These results illustrate that distribution-level interventions provide a more comprehensive method for steering model behavior, advancing interpretability research, and enabling finer-grained control over language models.",
+    "is_llm_safety": true
+  },
+  {
+    "title": "Analyze Feature Flow to Enhance Interpretation and Steering in Language Models",
+    "url": "https://icml.cc/virtual/2025/poster/45235",
+    "abstract": "We introduce a new approach to systematically map features discovered by sparse autoencoder across consecutive layers of large language models, extending earlier work that examined inter-layer feature links. By using a data-free cosine similarity technique, we trace how specific features persist, transform, or first appear at each stage. This method yields granular flow graphs of feature evolution, enabling fine-grained interpretability and mechanistic insights into model computations. Crucially, we demonstrate how these cross-layer feature maps facilitate direct steering of model behavior by amplifying or suppressing chosen features, achieving targeted thematic control in text generation. Together, our findings highlight the utility of a causal, cross-layer interpretability framework that not only clarifies how features develop through forward passes but also provides new means for transparent manipulation of large language models.",
+    "is_llm_safety": true,
+    "arxiv_url": "http://arxiv.org/abs/2502.03032v2",
+    "arxiv_id": "2502.03032v2",
+    "arxiv_title": "Analyze Feature Flow to Enhance Interpretation and Steering in Language Models",
+    "arxiv_authors": [
+      "Daniil Laptev",
+      "Nikita Balagansky",
+      "Yaroslav Aksenov",
+      "Daniil Gavrilov"
+    ],
+    "arxiv_published": "2025-02-05T09:39:34+00:00",
+    "similarity_score": 1.0,
+    "arxiv_all_matches": [
+      {
+        "arxiv_id": "2502.03032v2",
+        "arxiv_url": "http://arxiv.org/abs/2502.03032v2",
+        "arxiv_title": "Analyze Feature Flow to Enhance Interpretation and Steering in Language Models",
+        "authors": [
+          "Daniil Laptev",
+          "Nikita Balagansky",
+          "Yaroslav Aksenov",
+          "Daniil Gavrilov"
+        ],
+        "published": "2025-02-05T09:39:34+00:00",
+        "similarity_score": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Activation Space Interventions Can Be Transferred Between Large Language Models",
+    "url": "https://icml.cc/virtual/2025/poster/45778",
+    "abstract": "The study of representation universality in AI models reveals growing convergence across domains, modalities, and architectures. However, this representation universality remains largely unexploited. We bridge this gap by demonstrating that safety interventions can be transferred between models through learned mappings of their shared activation spaces. We demonstrate this approach on two well-established AI safety tasks: backdoor removal and refusal of harmful prompts, showing successful transfer of steering vectors that alter the models' outputs in a predictable way. Additionally, we propose a new task, corrupted capabilities, where models are fine-tuned to embed knowledge tied to a backdoor. This tests their ability to separate useful skills from backdoors, reflecting real-world challenges. Extensive experiments across LLaMA, Qwen and Gemma model families show that our method enables using smaller models to efficiently align larger ones. Furthermore, we demonstrate that autoencoder mappings between base and fine-tuned models can serve as reliable ``lightweight safety switches\", allowing dynamic toggling between model behaviors.",
+    "is_llm_safety": true,
+    "arxiv_url": "http://arxiv.org/abs/2503.04429v2",
+    "arxiv_id": "2503.04429v2",
+    "arxiv_title": "Activation Space Interventions Can Be Transferred Between Large Language Models",
+    "arxiv_authors": [
+      "Narmeen Oozeer",
+      "Dhruv Nathawani",
+      "Nirmalendu Prakash",
+      "Michael Lan",
+      "Abir Harrasse",
+      "Amirali Abdullah"
+    ],
+    "arxiv_published": "2025-03-06T13:38:44+00:00",
+    "similarity_score": 1.0,
+    "arxiv_all_matches": [
+      {
+        "arxiv_id": "2503.04429v2",
+        "arxiv_url": "http://arxiv.org/abs/2503.04429v2",
+        "arxiv_title": "Activation Space Interventions Can Be Transferred Between Large Language Models",
+        "authors": [
+          "Narmeen Oozeer",
+          "Dhruv Nathawani",
+          "Nirmalendu Prakash",
+          "Michael Lan",
+          "Abir Harrasse",
+          "Amirali Abdullah"
+        ],
+        "published": "2025-03-06T13:38:44+00:00",
+        "similarity_score": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Steering Protein Language Models",
+    "url": "https://icml.cc/virtual/2025/poster/43979",
+    "abstract": "Protein Language Models (PLMs), pre-trained on extensive evolutionary data from natural proteins, have emerged as indispensable tools for protein design. While powerful, PLMs often struggle to produce proteins with precisely specified functionalities or properties due to inherent challenges in controlling their outputs. In this work, we investigate the potential of Activation Steering - a technique originally developed for controlling text generation in Large Language Models (LLMs) - to direct PLMs toward generating protein sequences with targeted properties. We introduce a simple yet effective method that employs activation editing to steer PLM outputs, and extend this approach to protein optimization through a novel editing site identification module. Through comprehensive experiments on both auto-encoder and autoregressive PLMs focusing on lysozyme-like sequence generation and optimization, we demonstrate that our methods can be seamlessly integrated into existing PLMs without requiring additional training. This work establishes a new paradigm for precise protein engineering using foundation models.",
+    "is_llm_safety": false
+  },
+  {
+    "title": "Concept Reachability in Diffusion Models: Beyond Dataset Constraints",
+    "url": "https://icml.cc/virtual/2025/poster/44102",
+    "abstract": "Despite significant advances in quality and complexity of the generations in text-to-image models, prompting does not always lead to the desired outputs. Controlling model behaviour by directly steering intermediate model activations has emerged as a viable alternative allowing to reach concepts in latent space that may otherwise remain inaccessible by prompt. In this work, we introduce a set of experiments to deepen our understanding of concept reachability. We design a training data setup with three key obstacles: scarcity of concepts, underspecification of concepts in the captions, and data biases with tied concepts. Our results show: (i) concept reachability in latent space exhibits a distinct phase transition, with only a small number of samples being sufficient to enable reachability, (ii) where in the latent space the intervention is performed critically impacts reachability, showing that certain concepts are reachable only at certain stages of transformation, and (iii) while prompting ability rapidly diminishes with a decrease in quality of the dataset, concepts often remain reliably reachable through steering. Model providers can leverage this to bypass costly retraining and dataset curation and instead innovate with user-facing control mechanisms.",
+    "is_llm_safety": false
+  },
+  {
+    "title": "The Elicitation Game: Evaluating Capability Elicitation Techniques",
+    "url": "https://icml.cc/virtual/2025/poster/44250",
+    "abstract": "Capability evaluations are required to understand and regulate AI systems that maybe deployed or further developed. Therefore, it is important that evaluations providean accurate estimation of an AI system’s capabilities. However, in numerous cases,previously latent capabilities have been elicited from models, sometimes longafter initial release. Accordingly, substantial efforts have been made to developmethods for eliciting latent capabilities from models. In this paper, we evaluate theeffectiveness of capability elicitation techniques by intentionally training modelorganisms – language models with hidden capabilities that are revealed by apassword. We introduce a novel method for training model organisms, basedon circuit-breaking, which is more robust to elicitation techniques than standardpassword-locked models. We focus on elicitation techniques based on promptingand activation steering, and compare these to fine-tuning methods. Promptingtechniques can elicit the actual capability of both password-locked and circuit-broken model organisms in an MCQA setting, while steering fails to do so. Fora code-generation task, only fine-tuning can elicit the hidden capabilities of ournovel model organism. Additionally, our results suggest that combining techniquesimproves elicitation. Still, if possible, fine-tuning should be the method of choiceto improve the trustworthiness of capability evaluations.",
+    "is_llm_safety": true,
+    "arxiv_url": "http://arxiv.org/abs/2502.02180v2",
+    "arxiv_id": "2502.02180v2",
+    "arxiv_title": "The Elicitation Game: Evaluating Capability Elicitation Techniques",
+    "arxiv_authors": [
+      "Felix Hofstätter",
+      "Teun van der Weij",
+      "Jayden Teoh",
+      "Henning Bartsch",
+      "Francis Rhys Ward"
+    ],
+    "arxiv_published": "2025-02-04T09:54:24+00:00",
+    "similarity_score": 1.0,
+    "arxiv_all_matches": [
+      {
+        "arxiv_id": "2502.02180v2",
+        "arxiv_url": "http://arxiv.org/abs/2502.02180v2",
+        "arxiv_title": "The Elicitation Game: Evaluating Capability Elicitation Techniques",
+        "authors": [
+          "Felix Hofstätter",
+          "Teun van der Weij",
+          "Jayden Teoh",
+          "Henning Bartsch",
+          "Francis Rhys Ward"
+        ],
+        "published": "2025-02-04T09:54:24+00:00",
+        "similarity_score": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Focus On This, Not That! Steering LLMs With Adaptive Feature Specification",
+    "url": "https://icml.cc/virtual/2025/poster/43885",
+    "abstract": "Despite the success of Instruction Tuning (IT) in training large language models (LLMs) to perform arbitrary user-specified tasks, these models often still leverage spurious or biased features learned from their training data, leading to undesired behaviours when deploying them in new contexts. In this work, we introduce Focus Instruction Tuning (FIT), which trains LLMs to condition their responses by focusing on specific features whilst ignoring others, leading to different behaviours based on what features are specified. Across several experimental settings, we show that focus-tuned models can be adaptively steered by focusing on different features at inference-time: for instance, robustness can be improved by focusing on core task features and ignoring spurious features, and social bias can be mitigated by ignoring demographic categories. Furthermore, FIT can steer behaviour in new contexts, generalising under distribution shift and to new unseen features at inference time, and thereby facilitating more robust, fair, and controllable LLM applications in real-world environments.",
+    "is_llm_safety": true,
+    "arxiv_url": "http://arxiv.org/abs/2410.22944v3",
+    "arxiv_id": "2410.22944v3",
+    "arxiv_title": "Focus On This, Not That! Steering LLMs With Adaptive Feature Specification",
+    "arxiv_authors": [
+      "Tom A. Lamb",
+      "Adam Davies",
+      "Alasdair Paren",
+      "Philip H. S. Torr",
+      "Francesco Pinto"
+    ],
+    "arxiv_published": "2024-10-30T12:01:48+00:00",
+    "similarity_score": 1.0,
+    "arxiv_all_matches": [
+      {
+        "arxiv_id": "2410.22944v3",
+        "arxiv_url": "http://arxiv.org/abs/2410.22944v3",
+        "arxiv_title": "Focus On This, Not That! Steering LLMs With Adaptive Feature Specification",
+        "authors": [
+          "Tom A. Lamb",
+          "Adam Davies",
+          "Alasdair Paren",
+          "Philip H. S. Torr",
+          "Francesco Pinto"
+        ],
+        "published": "2024-10-30T12:01:48+00:00",
+        "similarity_score": 1.0
+      }
+    ]
+  },
+  {
+    "title": "To Steer or Not to Steer? Mechanistic Error Reduction with Abstention for Language Models",
+    "url": "https://icml.cc/virtual/2025/poster/44524",
+    "abstract": "We propose mechanistic error reduction with abstention (MERA), a principled steering framework for error mitigation in language models (LMs) that performs selective and adaptive interventions guided by error estimators. Existing steering methods construct steering vectors heuristically, such as by contrasting activations from examples with and without a target property (e.g. toxic vs non-toxic outputs). Adding these vectors to the model’s activations has shown promise for amplifying or suppressing specific behaviours. However, they typically rely on fixed intervention strengths, often leading to understeering or oversteering, without principles to balance safety and effective model corrections. MERA addresses these limitations by (i) optimising the intervention direction and (ii) calibrating when and how much to steer using user-defined constraints. Experiments across diverse datasets and LM families demonstrate notable improvements in task accuracy, establishing MERA as a general-purpose, safe and efficient method for mechanistic steering.",
+    "is_llm_safety": true
+  },
+  {
+    "title": "Interpreting CLIP with Hierarchical Sparse Autoencoders",
+    "url": "https://icml.cc/virtual/2025/poster/46435",
+    "abstract": "Sparse autoencoders (SAEs) are useful for detecting and steering interpretable features in neural networks, with particular potential for understanding complex multimodal representations. Given their ability to uncover interpretable features, SAEs are particularly valuable for analyzing large-scale vision-language models (e.g., CLIP and SigLIP), which are fundamental building blocks in modern systems yet remain challenging to interpret and control. However, current SAE methods are limited by optimizing both reconstruction quality and sparsity simultaneously, as they rely on either activation suppression or rigid sparsity constraints. To this end, we introduce Matryoshka SAE (MSAE), a new architecture that learns hierarchical representations at multiple granularities simultaneously, enabling a direct optimization of both metrics without compromise. MSAE establishes a new state-of-the-art Pareto frontier between reconstruction quality and sparsity for CLIP, achieving 0.99 cosine similarity and less than 0.1 fraction of variance unexplained while maintaining ~80% sparsity. Finally, we demonstrate the utility of MSAE as a tool for interpreting and controlling CLIP by extracting over 120 semantic concepts from its representation to perform concept-based similarity search and bias analysis in downstream tasks like CelebA.",
+    "is_llm_safety": false,
+    "arxiv_url": "http://arxiv.org/abs/2502.20578v1",
+    "arxiv_id": "2502.20578v1",
+    "arxiv_title": "Interpreting CLIP with Hierarchical Sparse Autoencoders",
+    "arxiv_authors": [
+      "Vladimir Zaigrajew",
+      "Hubert Baniecki",
+      "Przemyslaw Biecek"
+    ],
+    "arxiv_published": "2025-02-27T22:39:13+00:00",
+    "similarity_score": 1.0,
+    "arxiv_all_matches": [
+      {
+        "arxiv_id": "2502.20578v1",
+        "arxiv_url": "http://arxiv.org/abs/2502.20578v1",
+        "arxiv_title": "Interpreting CLIP with Hierarchical Sparse Autoencoders",
+        "authors": [
+          "Vladimir Zaigrajew",
+          "Hubert Baniecki",
+          "Przemyslaw Biecek"
+        ],
+        "published": "2025-02-27T22:39:13+00:00",
+        "similarity_score": 1.0
+      }
+    ]
+  },
+  {
+    "title": "AxBench: Steering LLMs? Even Simple Baselines Outperform Sparse Autoencoders",
+    "url": "https://icml.cc/virtual/2025/poster/45658",
+    "abstract": "Fine-grained steering of language model outputs is essential for safety and reliability. Prompting and finetuning are widely used to achieve these goals, but interpretability researchers have proposed a variety of representation-based techniques as well, including sparse autoencoders (SAEs), linear artificial tomography, supervised steering vectors, linear probes, and representation finetuning. At present, there is no benchmark for making direct comparisons between these proposals. Therefore, we introduce AxBench, a large-scale benchmark for steering and concept detection, and report experiments on Gemma-2-2B and 9B. For steering,  we find that prompting outperforms all existing methods, followed by finetuning. For concept detection, representation-based methods such as difference-in-means, perform the best. On both evaluations, SAEs are not competitive. We introduce a novel weakly-supervised representational method (Rank-1 Representation Finetuning; ReFT-r1), which is competitive on both tasks while providing the interpretability advantages that prompting lacks. Along with AxBench, we train and publicly release SAE-scale feature dictionaries for ReFT-r1 and DiffMean.",
+    "is_llm_safety": true,
+    "arxiv_url": "http://arxiv.org/abs/2501.17148v3",
+    "arxiv_id": "2501.17148v3",
+    "arxiv_title": "AxBench: Steering LLMs? Even Simple Baselines Outperform Sparse Autoencoders",
+    "arxiv_authors": [
+      "Zhengxuan Wu",
+      "Aryaman Arora",
+      "Atticus Geiger",
+      "Zheng Wang",
+      "Jing Huang",
+      "Dan Jurafsky",
+      "Christopher D. Manning",
+      "Christopher Potts"
+    ],
+    "arxiv_published": "2025-01-28T18:51:24+00:00",
+    "similarity_score": 1.0,
+    "arxiv_all_matches": [
+      {
+        "arxiv_id": "2501.17148v3",
+        "arxiv_url": "http://arxiv.org/abs/2501.17148v3",
+        "arxiv_title": "AxBench: Steering LLMs? Even Simple Baselines Outperform Sparse Autoencoders",
+        "authors": [
+          "Zhengxuan Wu",
+          "Aryaman Arora",
+          "Atticus Geiger",
+          "Zheng Wang",
+          "Jing Huang",
+          "Dan Jurafsky",
+          "Christopher D. Manning",
+          "Christopher Potts"
+        ],
+        "published": "2025-01-28T18:51:24+00:00",
+        "similarity_score": 1.0
+      }
+    ]
+  },
+  {
+    "title": "CROW: Eliminating Backdoors from Large Language Models via Internal Consistency Regularization",
+    "url": "https://icml.cc/virtual/2025/poster/44866",
+    "abstract": "Large Language Models (LLMs) are vulnerable to backdoor attacks that manipulate outputs via hidden triggers. Existing defense methods—designed for vision/text classification tasks—fail for text generation. We propose Internal Consistency Regularization (CROW), a defense leveraging the observation that backdoored models exhibit unstable layer-wise hidden representations when triggered, while clean models show smooth transitions. CROW enforces consistency across layers via adversarial perturbations and regularization during finetuning, neutralizing backdoors without requiring clean reference models or trigger knowledge—only a small clean dataset. Experiments across Llama-2 (7B, 13B), CodeLlama (7B, 13B), and Mistral-7B demonstrate CROW’s effectiveness: it achieves significant reductions in attack success rates across diverse backdoor strategies (sentiment steering, targeted refusal, code injection) while preserving generative performance. CROW’s architecture-agnostic design enables practical deployment.",
+    "is_llm_safety": true,
+    "arxiv_url": "http://arxiv.org/abs/2411.12768v1",
+    "arxiv_id": "2411.12768v1",
+    "arxiv_title": "CROW: Eliminating Backdoors from Large Language Models via Internal Consistency Regularization",
+    "arxiv_authors": [
+      "Nay Myat Min",
+      "Long H. Pham",
+      "Yige Li",
+      "Jun Sun"
+    ],
+    "arxiv_published": "2024-11-18T07:52:12+00:00",
+    "similarity_score": 1.0,
+    "arxiv_all_matches": [
+      {
+        "arxiv_id": "2411.12768v1",
+        "arxiv_url": "http://arxiv.org/abs/2411.12768v1",
+        "arxiv_title": "CROW: Eliminating Backdoors from Large Language Models via Internal Consistency Regularization",
+        "authors": [
+          "Nay Myat Min",
+          "Long H. Pham",
+          "Yige Li",
+          "Jun Sun"
+        ],
+        "published": "2024-11-18T07:52:12+00:00",
+        "similarity_score": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Learning Safety Constraints for Large Language Models",
+    "url": "https://icml.cc/virtual/2025/poster/45876",
+    "abstract": "Abstract Large language models (LLMs) have emerged as powerful tools but pose significant safety risks through harmful outputs and vulnerability to adversarial attacks. We propose SaP—short for Safety Polytope—a geometric approach to LLM safety, that learns and enforces multiple linear safety constraints directly in the model’s representation space. Our framework identifies safe and unsafe regions via the polytope’s facets, enabling both detection and correction of unsafe outputs through geometric steering. Unlike existing approaches that modify model weights, SaP operates post-hoc in the representation space, preserving model capabilities while enforcing safety constraints. Experiments across multiple LLMs demonstrate that our method reduces adversarial attack success rates from 30-60% to below 3% while maintaining performance on standard tasks. Analysis of the learned polytope facets reveals natural specialization in detecting different safety concepts, providing interpretable insights into its safety mechanisms.",
+    "is_llm_safety": true
+  },
+  {
+    "title": "Alpha-SQL: Zero-Shot Text-to-SQL using Monte Carlo Tree Search",
+    "url": "https://icml.cc/virtual/2025/poster/44263",
+    "abstract": "Text-to-SQL, which enables natural language interaction with databases, serves as a pivotal method across diverse industries.With new, more powerful large language models (LLMs) emerging every few months, fine-tuning has become incredibly costly, labor-intensive, and error-prone. As an alternative, zero-shot Text-to-SQL, which leverages the growing knowledge and reasoning capabilities encoded in LLMs without task-specific fine-tuning, presents a promising and more challenging direction.To address this challenge, we propose Alpha-SQL, a novel approach that leverages a Monte Carlo Tree Search (MCTS) framework to iteratively infer SQL construction actions based on partial SQL query states. To enhance the framework’s reasoning capabilities, we introduce LLM-as-Action-Model to dynamically generate SQL construction actions during the MCTS process, steering the search toward more promising SQL queries. Moreover, Alpha-SQL employs a self-supervised reward function to evaluate the quality of candidate SQL queries, ensuring more accurate and efficient query generation. Experimental results show that Alpha-SQL achieves 69.7% execution accuracy on the BIRD development set, using a 32B open-source LLM without fine-tuning. Alpha-SQL outperforms the best previous zero-shot approach based on GPT-4o by 2.5% on the BIRD development set.",
+    "is_llm_safety": false,
+    "arxiv_url": "https://arxiv.org/abs/2502.17248"
+  },
+  {
+    "title": "Iterative Vectors: In-Context Gradient Steering without Backpropagation",
+    "url": "https://icml.cc/virtual/2025/poster/46614",
+    "abstract": "In-context learning has become a standard approach for utilizing language models.However, selecting and processing suitable demonstration examples can be challenging and time-consuming, especially when dealing with a large number of examples.We propose exploring the potential of activation space using Iterative Vectors (IVs), a technique designed to enhance in-context performance by simulating gradient updates during inference.IVs extract and iteratively refine the gradients within a language model, applying them during inference without requiring backpropagation at any stage.We evaluate IVs across various tasks using four popular models and observe significant improvements.Our findings suggest that in-context activation steering can be a promising direction, opening new avenues for future research.",
+    "is_llm_safety": false
+  }
+]
